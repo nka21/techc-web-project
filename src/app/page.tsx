@@ -1,9 +1,9 @@
-import { NavBar } from "@/components/NavBar";
+import { FirstView } from "./_components/FirstView";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
+      <FirstView />
     </div>
   );
 }

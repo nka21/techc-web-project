@@ -1,5 +1,4 @@
 name: biome ci
-description:
 
 on:
   push:

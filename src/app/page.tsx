@@ -1,9 +1,11 @@
-import Image from "next/image";
+import { About } from "./_components/About";
+import { FirstView } from "./_components/FirstView";
 
 export default function Home() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <FirstView />
+      <About />
     </div>
   );
 }

@@ -11,8 +11,8 @@ const NavItem = ({ item }: { item: string }) => (
 export const NavBar = () => {
   return (
     <>
-      <nav className="flex justify-between items-center">
-        <div className="w-[260px] h-[100px] bg-white rounded-full" />
+      <nav className="flex items-center justify-between">
+        <div className="h-[100px] w-[260px] rounded-full bg-white" />
         <ul className="flex space-x-[50px]">
           {["ABOUT", "MAP", "FOOD", "RENTAL", "EVENT", "OTHER"].map((item) => (
             <NavItem key={item} item={item} />

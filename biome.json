@@ -8,7 +8,8 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "nursery": { "useSortedClasses": "warn" }
     }
   },
   "formatter": {

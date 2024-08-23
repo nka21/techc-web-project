@@ -2,7 +2,7 @@ import React from "react";
 
 export const EventMap = () => {
   return (
-    <section id="map" className="mt-72">
+    <section id="map" className="pt-72">
       <div className="flex flex-row items-center justify-center space-x-20">
         <svg
           width="120"

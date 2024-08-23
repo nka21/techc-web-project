@@ -22,7 +22,7 @@ const EventInfo = () => (
 
 export const FirstView = () => {
   return (
-    <div className="h-[1024px] bg-primary text-white">
+    <div className="h-screen w-full bg-primary text-white">
       <header className="px-[50px] pt-[50px]">
         <NavBar />
       </header>

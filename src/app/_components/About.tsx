@@ -1,6 +1,9 @@
 export const About = () => {
   return (
-    <section className="my-48 flex flex-row justify-between px-20">
+    <section
+      id="about"
+      className="flex h-full w-full flex-row justify-between px-20 py-48"
+    >
       <div className="flex flex-col">
         <div className="flex flex-row items-end space-x-8">
           <h1 className="font-semibold text-6xl text-primary tracking-[6px]">

@@ -13,8 +13,8 @@ export const NavBar = () => {
     <>
       <nav className="flex items-center justify-between">
         <div className="h-[100px] w-[260px] rounded-full bg-white" />
-        <ul className="flex space-x-[50px]">
-          {["ABOUT", "MAP", "FOOD", "RENTAL", "EVENT", "OTHER"].map((item) => (
+        <ul className="flex space-x-[50px] uppercase">
+          {["about", "map", "food", "rental", "event", "other"].map((item) => (
             <NavItem key={item} item={item} />
           ))}
         </ul>

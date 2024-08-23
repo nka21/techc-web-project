@@ -6,6 +6,7 @@ export default function Home() {
     <div>
       <FirstView />
       <About />
+      <Enjoy />
     </div>
   );
 }

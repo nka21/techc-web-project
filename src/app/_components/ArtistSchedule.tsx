@@ -3,7 +3,7 @@ import React from "react";
 const ArtistSchedule = () => {
   return (
     <section className="px-16 pt-72">
-      <div className="flex flex-row items-end space-x-8">
+      <div className="flex flex-row items-end space-x-8 mb-24">
         <h1 className="font-semibold text-6xl text-primary tracking-[6px]">
           ARTIST
         </h1>

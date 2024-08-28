@@ -63,7 +63,7 @@ const PaymentIcon: React.FC = () => (
 
 const DrinkFood = () => {
   return (
-    <div className="w-full min-h-screen relative overflow-hidden mb-36">
+    <div className="w-full min-h-screen relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={drink_food_bg}

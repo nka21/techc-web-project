@@ -58,7 +58,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
 
 const Active = () => {
   return (
-    <div className="px-20 py-48">
+    <section className="px-20 py-48">
       <div className="mb-12">
         <div className="flex items-baseline space-x-4 mb-6 text-primary">
           <h1 className="text-6xl font-semibold tracking-[6px]">ACTIVE</h1>
@@ -103,7 +103,7 @@ const Active = () => {
 子供から大人まで楽しめるアクティビティが満載です。"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

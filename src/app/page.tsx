@@ -5,6 +5,7 @@ import DrinkFood from "./_components/DrinkFood";
 import { Enjoy } from "./_components/Enjoy";
 import { EventMap } from "./_components/EventMap";
 import { FirstView } from "./_components/FirstView";
+import Rental from "./_components/Rental";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ArtistSchedule />
       <DrinkFood />
       <Active />
+      <Rental />
     </div>
   );
 }

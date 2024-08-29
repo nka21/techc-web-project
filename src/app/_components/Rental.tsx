@@ -157,33 +157,33 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
 };
 
 const RentalItem: React.FC<RentalItemProps> = ({ id, name }) => (
-    <div className="flex flex-col space-y-8">
-      <div className="relative">
-        <svg
-          width="186"
-          height="186"
-          viewBox="0 0 186 186"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="93" cy="93" r="90" fill="white" />
-          <circle
-            cx="93"
-            cy="93"
-            r="91.5"
-            stroke="#0077CA"
-            stroke-opacity="0.4"
-            stroke-width="3"
-          />
-        </svg>
-        <div className="absolute flex items-center justify-center inset-0">
-          {RentalItemIcons[id]}
-        </div>
-      </div>
-      <div className="m-auto text-[#212121] text-2xl font-semibold tracking-widest">
-        {name}
+  <div className="flex flex-col space-y-8">
+    <div className="relative">
+      <svg
+        width="186"
+        height="186"
+        viewBox="0 0 186 186"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="93" cy="93" r="90" fill="white" />
+        <circle
+          cx="93"
+          cy="93"
+          r="91.5"
+          stroke="#0077CA"
+          stroke-opacity="0.4"
+          stroke-width="3"
+        />
+      </svg>
+      <div className="absolute flex items-center justify-center inset-0">
+        {RentalItemIcons[id]}
       </div>
     </div>
+    <div className="m-auto text-[#212121] text-2xl font-semibold tracking-widest">
+      {name}
+    </div>
+  </div>
 );
 
 const Rental = () => {
@@ -201,30 +201,12 @@ const Rental = () => {
         </p>
       </div>
       <div className="flex space-x-11 justify-between">
-        <RentalItem
-          id={1}
-          name="ビーチチェア"
-        />
-        <RentalItem
-          id={2}
-          name="パラソル"
-        />
-        <RentalItem
-          id={3}
-          name="浮き輪"
-        />
-        <RentalItem
-          id={4}
-          name="サーフボード"
-        />
-        <RentalItem
-          id={5}
-          name="ライフジャケット"
-        />
-        <RentalItem
-          id={6}
-          name="ウェットスーツ"
-        />
+        <RentalItem id={1} name="ビーチチェア" />
+        <RentalItem id={2} name="パラソル" />
+        <RentalItem id={3} name="浮き輪" />
+        <RentalItem id={4} name="サーフボード" />
+        <RentalItem id={5} name="ライフジャケット" />
+        <RentalItem id={6} name="ウェットスーツ" />
       </div>
     </section>
   );

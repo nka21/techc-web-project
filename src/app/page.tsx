@@ -1,4 +1,5 @@
 import { About } from "./_components/About";
+import Active from "./_components/Active";
 import ArtistSchedule from "./_components/ArtistSchedule";
 import DrinkFood from "./_components/DrinkFood";
 import { Enjoy } from "./_components/Enjoy";
@@ -14,6 +15,7 @@ export default function Home() {
       <EventMap />
       <ArtistSchedule />
       <DrinkFood />
+      <Active />
     </div>
   );
 }

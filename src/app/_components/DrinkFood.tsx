@@ -46,8 +46,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
 
 const PaymentIcon: React.FC = () => (
   <svg
-    width="30"
-    height="22"
+    className="w-6 h-auto md:w-8 lg:w-10"
     viewBox="0 0 30 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +55,7 @@ const PaymentIcon: React.FC = () => (
     <title id="paymentIconTitle">支払い方法アイコン</title>
     <path
       d="M26.0138 0.453125H3.98619C1.78529 0.453125 0 2.23842 0 4.43932V17.5607C0 19.7616 1.78529 21.5469 3.98619 21.5469H26.0138C28.2147 21.5469 30 19.7616 30 17.5607V4.43932C30 2.23842 28.2147 0.453125 26.0138 0.453125ZM28.125 17.5607C28.125 18.7252 27.1784 19.6719 26.0138 19.6719H3.98619C2.82164 19.6719 1.875 18.7252 1.875 17.5607V9.125H28.125V17.5607ZM28.125 6.3125H1.875V4.43932C1.875 3.27477 2.82164 2.32812 3.98619 2.32812H26.0138C27.1784 2.32812 28.125 3.27477 28.125 4.43932V6.3125Z"
-      fill="#212121"
+      fill="currentColor"
     />
   </svg>
 );
@@ -91,7 +90,7 @@ const DrinkFood = () => {
           </p>
           <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="font-semibold text-[#212121] text-lg tracking-widest">
+            <p className="font-semibold text-[#212121] text-sm md:text-base lg:text-lg tracking-widest">
               現金 / 交通系IC / PayPay
             </p>
           </div>

@@ -6,8 +6,7 @@ import active3 from "@/assets/actives/active3.jpg";
 
 const PaymentIcon: React.FC = () => (
   <svg
-    width="30"
-    height="22"
+    className="w-6 h-auto md:w-8 lg:w-10"
     viewBox="0 0 30 22"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +15,7 @@ const PaymentIcon: React.FC = () => (
     <title id="paymentIconTitle">支払い方法アイコン</title>
     <path
       d="M26.0138 0.453125H3.98619C1.78529 0.453125 0 2.23842 0 4.43932V17.5607C0 19.7616 1.78529 21.5469 3.98619 21.5469H26.0138C28.2147 21.5469 30 19.7616 30 17.5607V4.43932C30 2.23842 28.2147 0.453125 26.0138 0.453125ZM28.125 17.5607C28.125 18.7252 27.1784 19.6719 26.0138 19.6719H3.98619C2.82164 19.6719 1.875 18.7252 1.875 17.5607V9.125H28.125V17.5607ZM28.125 6.3125H1.875V4.43932C1.875 3.27477 2.82164 2.32812 3.98619 2.32812H26.0138C27.1784 2.32812 28.125 3.27477 28.125 4.43932V6.3125Z"
-      fill="#212121"
+      fill="currentColor"
     />
   </svg>
 );
@@ -37,12 +36,13 @@ export const Active = () => {
             </h2>
           </div>
           {/* サブタイトル */}
-          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
-            営業時間： 10:00-17:00（最終受付 16:00）
-          </p>
+          <div className="flex flex-col md:flex-row font-semibold text-primary text-xl tracking-widest md:text-2xl">
+            <span>営業時間： 10:00-17:00</span>
+            <span className="md:ml-2">（最終受付 16:00）</span>
+          </div>
           <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="font-semibold text-[#212121] text-lg tracking-widest">
+            <p className="font-semibold text-[#212121] text-sm md:text-base lg:text-lg tracking-widest">
               クレジットカード / 現金 / 交通系IC / PayPay
             </p>
           </div>
@@ -73,11 +73,11 @@ export const Active = () => {
           </div>
           <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
             <div className="">
-              <Image src={active2} alt="海上ゴーカート" />
+              <Image src={active2} alt="海上バイク" />
             </div>
             <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
               <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
-                海上ゴーカート
+                海上バイク
               </h3>
               <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
                 <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">

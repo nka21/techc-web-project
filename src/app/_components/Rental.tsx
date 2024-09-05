@@ -201,9 +201,10 @@ export const Rental = () => {
               レンタルサービス
             </h2>
           </div>
-          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
-            営業時間: 10:00-17:00（最終受付 16:00）
-          </p>
+          <div className="flex flex-col md:flex-row font-semibold text-primary text-xl tracking-widest md:text-2xl">
+            <span>営業時間： 10:00-17:00</span>
+            <span className="md:ml-2">（最終受付 16:00）</span>
+          </div>
         </div>
         {/* コンテンツ */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 xl:grid-cols-6 xl:gap-8">

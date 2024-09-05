@@ -91,7 +91,7 @@ export const Enjoy = () => {
             </div>
             {/* 詳細 */}
             <div className="max-w-2xl">
-              <p className="text-wrap font-medium text-[#212121] text-xl leading-loose tracking-widest md:text-2xl md:leading-loose md:tracking-widest">
+              <p className="text-wrap font-medium text-[#212121] text-base leading-loose tracking-widest md:text-xl md:leading-loose md:tracking-widest">
                 海上花火フェスティバルは、
                 <br />
                 主に３つの観点で楽しむことができます。

@@ -16,7 +16,7 @@ export const About = () => {
             </div>
             {/* 詳細 */}
             <div className="max-w-2xl">
-              <p className="text-pretty font-medium text-[#212121] text-xl leading-loose tracking-widest md:text-2xl md:leading-loose md:tracking-widest">
+              <p className="text-pretty font-medium text-[#212121] text-base leading-loose tracking-widest md:text-xl md:leading-loose md:tracking-widest">
                 海上花火フェスティバルは、
                 <br />
                 迫力満点の花火ショーやライブ音楽、マリンスポーツ、美味しい屋台グルメが一堂に。

@@ -42,6 +42,7 @@ const FAQItem = ({
           </p>
         </div>
         <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
           className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#0077c9] sm:h-10 sm:w-10 md:h-[50px] md:w-[50px]"
         >
@@ -69,26 +70,31 @@ const FAQItem = ({
 export const Faq = () => {
   const faqItems = [
     {
+      id: "1",
       question: "雨天の場合、イベントはどうなりますか？",
       answer:
         "荒天の場合は延期または中止となる可能性があります。\n最新情報は公式ウェブサイトやSNSで随時お知らせいたします。",
     },
     {
+      id: "2",
       question: "駐車場はありますか？",
       answer:
         "はい、会場近くに無料駐車場をご用意しております。ただし、台数に限りがありますので、公共交通機関のご利用もご検討ください。",
     },
     {
+      id: "3",
       question: "イベントにはチケットが必要ですか？",
       answer:
         "メインイベントは入場無料です。ただし、一部のアトラクションやワークショップには別途チケットが必要な場合があります。",
     },
     {
+      id: "4",
       question: "マリンスポーツの参加方法を教えてください。",
       answer:
         "マリンスポーツへの参加は、会場内の受付ブースで当日申し込みが可能です。安全のため、参加前の説明会への出席が必須となります。",
     },
     {
+      id: "5",
       question: "会場内に救護所はありますか？",
       answer:
         "はい、会場内に救護所を設置しています。また、救護スタッフが巡回していますので、体調不良の際はお近くのスタッフにお声がけください。",
@@ -109,9 +115,9 @@ export const Faq = () => {
         </div>
         {/* コンテンツ */}
         <div className="space-y-4 sm:space-y-6 md:space-y-8">
-          {faqItems.map((item, index) => (
+          {faqItems.map((item) => (
             <FAQItem
-              key={index}
+              key={item.id}
               question={item.question}
               answer={item.answer}
             />

@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 
 // 型の定義
 type RentalItemId = 1 | 2 | 3 | 4 | 5 | 6;
@@ -11,8 +11,8 @@ interface RentalItemProps {
 const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   1: (
     <svg
-      width="100"
-      height="100"
+      width={80}
+      height={80}
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +45,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   ),
   2: (
     <svg
-      width="100"
-      height="100"
+      width={80}
+      height={80}
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +80,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   ),
   3: (
     <svg
-      width="100"
-      height="100"
+      width={80}
+      height={80}
       viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -102,8 +102,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   ),
   4: (
     <svg
-      width="84"
-      height="119"
+      width={80}
+      height={80}
       viewBox="0 0 84 119"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +126,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   ),
   5: (
     <svg
-      width="100"
-      height="99"
+      width={80}
+      height={80}
       viewBox="0 0 100 99"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +141,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
   ),
   6: (
     <svg
-      width="64"
-      height="114"
+      width={80}
+      height={80}
       viewBox="0 0 64 114"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -157,15 +157,9 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
 };
 
 const RentalItem: React.FC<RentalItemProps> = ({ id, name }) => (
-  <div className="flex flex-col space-y-8">
-    <div className="relative">
-      <svg
-        width="186"
-        height="186"
-        viewBox="0 0 186 186"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div className="flex flex-col gap-4 items-center">
+    <div className="relative w-36 h-36">
+      <svg viewBox="0 0 186 186" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="93" cy="93" r="90" fill="white" />
         <circle
           cx="93"
@@ -176,40 +170,44 @@ const RentalItem: React.FC<RentalItemProps> = ({ id, name }) => (
           stroke-width="3"
         />
       </svg>
-      <div className="absolute flex items-center justify-center inset-0">
-        {RentalItemIcons[id]}
+      <div className="absolute flex items-center justify-center inset-0 p-8">
+        <div className="h-20 w-20">{RentalItemIcons[id]}</div>
       </div>
     </div>
-    <div className="m-auto text-[#212121] text-2xl font-semibold tracking-widest">
+    <div className="text-[#212121] text-lg font-semibold tracking-widest">
       {name}
     </div>
   </div>
 );
 
-const Rental = () => {
+export const Rental = () => {
   return (
-    <section className="px-20 py-48">
-      <div className="mb-12">
-        <div className="flex items-baseline space-x-4 mb-6 text-primary">
-          <h1 className="text-6xl font-semibold tracking-[6px]">RENTAL</h1>
-          <span className="text-3xl font-semibold tracking-[3px]">
-            レンタルサービス
-          </span>
+    <section className="min-h-full w-full">
+      <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
+        {/* セクションタイトル */}
+        <div className="flex flex-col gap-4 mb-12">
+          <div className="items-end gap-4 sm:flex">
+            <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
+              RENTAL
+            </h1>
+            <h2 className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
+              レンタルサービス
+            </h2>
+          </div>
+          <p className="text-primary text-xl font-semibold tracking-widest md:text-2xl">
+            営業時間: 10:00-17:00（最終受付 16:00）
+          </p>
         </div>
-        <p className="text-primary text-3xl font-semibold tracking-[3px] mb-6">
-          営業時間: 10:00-17:00 （最終受付 16:00）
-        </p>
-      </div>
-      <div className="flex space-x-11 justify-between">
-        <RentalItem id={1} name="ビーチチェア" />
-        <RentalItem id={2} name="パラソル" />
-        <RentalItem id={3} name="浮き輪" />
-        <RentalItem id={4} name="サーフボード" />
-        <RentalItem id={5} name="ライフジャケット" />
-        <RentalItem id={6} name="ウェットスーツ" />
+        {/* コンテンツ */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 xl:gap-8">
+          <RentalItem id={1} name="ビーチチェア" />
+          <RentalItem id={2} name="パラソル" />
+          <RentalItem id={3} name="浮き輪" />
+          <RentalItem id={4} name="サーフボード" />
+          <RentalItem id={5} name="ライフジャケット" />
+          <RentalItem id={6} name="ウェットスーツ" />
+        </div>
       </div>
     </section>
   );
 };
-
-export default Rental;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import enjoy01 from "@/assets/enjoy/enjoy01.png";
+import enjoy02 from "@/assets/enjoy/enjoy02.png";
 
 const Enjoy01 = () => {
   return (
@@ -46,6 +47,9 @@ const Enjoy02 = () => {
         <span className="font-bold text-5xl text-primary tracking-wide sm:text-6xl md:text-7xl">
           02
         </span>
+      </div>
+      <div className="-bottom-4 -left-36 absolute hidden lg:block">
+        <Image src={enjoy02} alt="enjoy02" />
       </div>
     </div>
   );

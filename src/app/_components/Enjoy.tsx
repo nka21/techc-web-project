@@ -75,7 +75,7 @@ const Enjoy03 = () => {
 
 export const Enjoy = () => {
   return (
-    <section className="relative min-h-screen w-full">
+    <section className="relative min-h-full md:min-h-screen w-full">
       <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
         <div className="flex justify-between sm:gap-x-8 md:gap-x-12">
           {/* 文章 */}
@@ -146,7 +146,7 @@ export const Enjoy = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-72 right-1/3 xl:top-24 xl:right-80">
+      <div className="hidden md:block absolute top-72 right-1/3 xl:top-24 xl:right-80">
         <div className="relative flex justify-center">
           <Enjoy01 />
         </div>

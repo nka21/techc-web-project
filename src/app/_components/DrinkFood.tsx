@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import React from "react";
+import Image, { type StaticImageData } from "next/image";
+import type React from "react";
 
 // 画像のインポート
 import banana from "@/assets/drink_food/banana.jpg";
@@ -24,9 +24,9 @@ const FoodCard: React.FC<FoodCardProps> = ({
   className,
 }) => (
   <div
-    className={`w-[380px] h-[400px] flex-shrink-0 bg-white rounded-[20px] overflow-hidden shadow-lg ${className}`}
+    className={`h-80 w-80 flex-shrink-0 overflow-hidden rounded-[20px] bg-white shadow-lg ${className}`}
   >
-    <div className="w-full h-[200px] relative">
+    <div className="relative h-36 w-full">
       <Image
         src={image}
         alt={`${title} artist image`}
@@ -35,11 +35,11 @@ const FoodCard: React.FC<FoodCardProps> = ({
       />
     </div>
     <div className="p-6">
-      <div className="flex items-baseline space-x-4 mb-4 font-semibold text-xl">
-        <h3 className="tracking-widest">{title}</h3>
+      <div className="mb-4 flex items-baseline space-x-4 font-semibold">
+        <h3 className="text-md tracking-widest">{title}</h3>
         <span className="tracking-[2px]">{price}</span>
       </div>
-      <p className="text-base tracking-widest">{description}</p>
+      <p className="text-sm leading-relaxed tracking-widest">{description}</p>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ const PaymentIcon: React.FC = () => (
 
 const DrinkFood = () => {
   return (
-    <div className="w-full min-h-screen relative overflow-hidden">
+    <section className="relative h-full min-h-full w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={drink_food_bg}
@@ -74,29 +74,31 @@ const DrinkFood = () => {
         />
         <div className="absolute inset-0 bg-[#0077c9]/10" />
       </div>
-      <div className="relative z-10 px-[70px] pt-[174px]">
-        <div className="mb-12">
-          <div className="flex items-baseline space-x-4 mb-6 text-primary">
-            <h1 className="text-6xl font-semibold tracking-[6px]">
+      <div className="container relative z-10 mx-auto my-32 px-8 md:px-12 lg:px-20">
+        <div className="mb-12 flex flex-col gap-4">
+          {/* メインタイトル */}
+          <div className="items-end gap-4 sm:flex">
+            <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
               DRINK&FOOD
             </h1>
-            <span className="text-3xl font-semibold tracking-[3px]">
+            <h2 className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
               浜辺の屋台
-            </span>
+            </h2>
           </div>
-          <p className="text-primary text-3xl font-semibold tracking-[3px] mb-6">
-            営業時間: 10:00-19:00
+          {/* サブタイトル */}
+          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
+            営業時間： 10:00-19:00
           </p>
-          <div className="flex items-center space-x-[10px]">
+          <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="text-[#212121] text-xl font-semibold tracking-widest">
+            <p className="font-semibold text-[#212121] text-lg tracking-widest">
               現金 / 交通系IC / PayPay
             </p>
           </div>
         </div>
 
         <div className="overflow-x-auto">
-          <div className="flex gap-x-10 lg:gap-x-24 w-max pb-8">
+          <div className="flex w-max gap-x-10 pb-8 lg:gap-x-24">
             <div>
               <FoodCard
                 image={banana}
@@ -132,7 +134,7 @@ const DrinkFood = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

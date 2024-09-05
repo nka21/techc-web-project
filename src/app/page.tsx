@@ -1,13 +1,15 @@
+import { FirstView } from "./_components/FirstView";
 import { About } from "./_components/About";
-import Active from "./_components/Active";
-import ArtistSchedule from "./_components/ArtistSchedule";
-import DrinkFood from "./_components/DrinkFood";
 import { Enjoy } from "./_components/Enjoy";
 import { EventMap } from "./_components/EventMap";
-import FAQ from "./_components/FAQ";
-import Firework from "./_components/Firework";
-import { FirstView } from "./_components/FirstView";
-import Rental from "./_components/Rental";
+import { ArtistSchedule } from "./_components/ArtistSchedule";
+import DrinkFood from "./_components/DrinkFood";
+import { Active } from "./_components/Active";
+import { Rental } from "./_components/Rental";
+import { Firework } from "./_components/Firework";
+import { Faq } from "./_components/FAQ";
+import { Notes } from "./_components/Notes";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +23,9 @@ export default function Home() {
       <Active />
       <Rental />
       <Firework />
-      <FAQ />
+      <Faq />
+      <Notes />
+      <Footer />
     </div>
   );
 }

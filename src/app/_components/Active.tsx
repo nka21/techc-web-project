@@ -1,20 +1,8 @@
-import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-// 画像のインポート
 import active1 from "@/assets/actives/active1.jpg";
 import active2 from "@/assets/actives/active2.jpg";
 import active3 from "@/assets/actives/active3.jpg";
-
-// 型の定義
-interface ActivityCardProps {
-  image: StaticImageData;
-  title: string;
-  price: string;
-  duration: string;
-  minAge: string;
-  description: string;
-}
 
 const PaymentIcon: React.FC = () => (
   <svg
@@ -33,78 +21,102 @@ const PaymentIcon: React.FC = () => (
   </svg>
 );
 
-const ActivityCard: React.FC<ActivityCardProps> = ({
-  image,
-  title,
-  price,
-  duration,
-  minAge,
-  description,
-}) => (
-  <div className="flex flex-col items-start w-96">
-    <div className="mb-8 rounded-lg">
-      <Image src={image} alt={title} />
-    </div>
-    <h3 className="text-2xl font-semibold text-primary mb-4">{title}</h3>
-    <p className="text-[#212121] text-xl font-semibold tracking-widest mb-1">
-      {price} / {duration}
-    </p>
-    <p className="text-sm font-semibold tracking-wider mb-2">
-      参加条件：{minAge}
-    </p>
-    <p className="text-sm">{description}</p>
-  </div>
-);
-
-const Active = () => {
+export const Active = () => {
   return (
-    <section className="px-20 py-48">
-      <div className="mb-12">
-        <div className="flex items-baseline space-x-4 mb-6 text-primary">
-          <h1 className="text-6xl font-semibold tracking-[6px]">ACTIVE</h1>
-          <span className="text-3xl font-semibold tracking-[3px]">
-            マリンスポーツ
-          </span>
-        </div>
-        <p className="text-primary text-3xl font-semibold tracking-[3px] mb-6">
-          営業時間: 10:00-17:00 （最終受付 16:00）
-        </p>
-        <div className="flex items-center space-x-[10px]">
-          <PaymentIcon />
-          <p className="text-[#212121] text-xl font-semibold tracking-widest">
-            クレジットカード / 現金 / 交通系IC / PayPay
+    <section className="min-h-full w-full">
+      <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
+        {/* 見出しの部分 */}
+        <div className="mb-12 flex flex-col gap-4">
+          {/* メインタイトル */}
+          <div className="items-end gap-4 sm:flex">
+            <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
+              ACTIVE
+            </h1>
+            <h2 className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
+              マリンスポーツ
+            </h2>
+          </div>
+          {/* サブタイトル */}
+          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
+            営業時間： 10:00-17:00（最終受付 16:00）
           </p>
+          <div className="flex items-center gap-4">
+            <PaymentIcon />
+            <p className="font-semibold text-[#212121] text-lg tracking-widest">
+              クレジットカード / 現金 / 交通系IC / PayPay
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="flex space-x-12 justify-between">
-        <ActivityCard
-          image={active1}
-          title="バナナボート"
-          price="1,500円"
-          duration="15min"
-          minAge="6歳以上"
-          description="みんなで楽しめるバナナボート！インストラクターがボートを引っ張り、スピード感溢れる体験が楽しめます。"
-        />
-        <ActivityCard
-          image={active2}
-          title="海上ゴーカート"
-          price="2,000円"
-          duration="30min"
-          minAge="なし"
-          description="ゆっくり走行で優雅にクルージングできる、お子様でも運転できる安心安全マリンスポーツです。"
-        />
-        <ActivityCard
-          image={active3}
-          title="水上滑り台"
-          price="500円"
-          duration="1hr"
-          minAge="なし"
-          description="海の上の大型のアトラクションです。
-子供から大人まで楽しめるアクティビティが満載です。"
-        />
+        {/* コンテンツ */}
+        <div className="flex flex-col gap-10 lg:gap-10 xl:flex-row xl:justify-between">
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
+            <div className="">
+              <Image src={active1} alt="バナナボート" />
+            </div>
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
+                バナナボート
+              </h3>
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
+                  1,500<span className="text-sm md:text-base">円</span> / 15
+                  <span className="text-sm md:text-base">min</span>
+                </h4>
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
+                  参加条件：６<span className="text-xs md:text-sm">歳以上</span>
+                </h5>
+              </div>
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
+                みんなで楽しめるバナナボート！インストラクターがボートを引っ張り、スピード感溢れる体験が楽しめます。
+              </p>
+            </div>
+          </div>
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
+            <div className="">
+              <Image src={active2} alt="海上ゴーカート" />
+            </div>
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
+                海上ゴーカート
+              </h3>
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
+                  2,000<span className="text-sm md:text-base">円</span> / 30
+                  <span className="text-sm md:text-base">min</span>
+                </h4>
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
+                  参加条件：なし
+                </h5>
+              </div>
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
+                ゆっくり走行で優雅にクルージングできる、お子様でも運転できる安心安全マリンスポーツです。
+              </p>
+            </div>
+          </div>
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
+            <div className="">
+              <Image src={active3} alt="水上滑り台" />
+            </div>
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
+                水上滑り台
+              </h3>
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
+                  500<span className="text-sm md:text-base">円</span> / 1
+                  <span className="text-sm md:text-base">hr</span>
+                </h4>
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
+                  参加条件：なし
+                </h5>
+              </div>
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
+                海の上の大型のアトラクションです。子供から大人まで楽しめるアクティビティが満載です。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
-
-export default Active;

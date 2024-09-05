@@ -103,7 +103,7 @@ export const Faq = () => {
 
   return (
     <section className="min-h-full w-full">
-      <div className="container mx-auto my-16 px-4 sm:my-24 sm:px-8 md:my-32 md:px-12 lg:px-20">
+      <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
         {/* セクションタイトル */}
         <div className="mb-8 flex flex-col gap-2 sm:mb-12 sm:flex-row sm:items-end sm:gap-4">
           <h1 className="font-bold text-2xl text-primary tracking-widest sm:text-3xl md:text-4xl lg:text-5xl">

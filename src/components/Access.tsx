@@ -2,7 +2,7 @@ import { HiArrowRight } from "react-icons/hi";
 
 export const Access = () => {
   return (
-    <div className="min-h-full rounded-2xl bg-white px-12 py-8 text-[#212121]">
+    <div className="min-h-full rounded-2xl bg-white px-12 py-8 text-[#212121] hidden lg:block">
       <div className="flex justify-between">
         <div>
           <p className="font-semibold text-3xl leading-relaxed tracking-widest">

@@ -24,9 +24,9 @@ const FoodCard: React.FC<FoodCardProps> = ({
   className,
 }) => (
   <div
-    className={`w-80 h-80 flex-shrink-0 bg-white rounded-[20px] overflow-hidden shadow-lg ${className}`}
+    className={`h-80 w-80 flex-shrink-0 overflow-hidden rounded-[20px] bg-white shadow-lg ${className}`}
   >
-    <div className="w-full h-36 relative">
+    <div className="relative h-36 w-full">
       <Image
         src={image}
         alt={`${title} artist image`}
@@ -35,11 +35,11 @@ const FoodCard: React.FC<FoodCardProps> = ({
       />
     </div>
     <div className="p-6">
-      <div className="flex items-baseline space-x-4 mb-4 font-semibold">
+      <div className="mb-4 flex items-baseline space-x-4 font-semibold">
         <h3 className="text-md tracking-widest">{title}</h3>
         <span className="tracking-[2px]">{price}</span>
       </div>
-      <p className="text-sm tracking-widest leading-relaxed">{description}</p>
+      <p className="text-sm leading-relaxed tracking-widest">{description}</p>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ const PaymentIcon: React.FC = () => (
 
 const DrinkFood = () => {
   return (
-    <section className="w-full min-h-full h-full relative overflow-hidden">
+    <section className="relative h-full min-h-full w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={drink_food_bg}
@@ -74,8 +74,8 @@ const DrinkFood = () => {
         />
         <div className="absolute inset-0 bg-[#0077c9]/10" />
       </div>
-      <div className="container mx-auto relative z-10 px-8 md:px-12 lg:px-20 my-32">
-        <div className="flex flex-col mb-12 gap-4">
+      <div className="container relative z-10 mx-auto my-32 px-8 md:px-12 lg:px-20">
+        <div className="mb-12 flex flex-col gap-4">
           {/* メインタイトル */}
           <div className="items-end gap-4 sm:flex">
             <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
@@ -86,19 +86,19 @@ const DrinkFood = () => {
             </h2>
           </div>
           {/* サブタイトル */}
-          <p className="text-primary text-xl md:text-2xl font-semibold tracking-widest">
+          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
             営業時間： 10:00-19:00
           </p>
           <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="text-[#212121] text-lg font-semibold tracking-widest">
+            <p className="font-semibold text-[#212121] text-lg tracking-widest">
               現金 / 交通系IC / PayPay
             </p>
           </div>
         </div>
 
         <div className="overflow-x-auto">
-          <div className="flex gap-x-10 lg:gap-x-24 w-max pb-8">
+          <div className="flex w-max gap-x-10 pb-8 lg:gap-x-24">
             <div>
               <FoodCard
                 image={banana}

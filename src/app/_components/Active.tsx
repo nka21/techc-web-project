@@ -26,9 +26,9 @@ export const Active = () => {
     <section className="min-h-full w-full">
       <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
         {/* 見出しの部分 */}
-        <div className="flex flex-col gap-4 mb-12">
+        <div className="mb-12 flex flex-col gap-4">
           {/* メインタイトル */}
-          <div className="items-end sm:flex gap-4">
+          <div className="items-end gap-4 sm:flex">
             <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
               ACTIVE
             </h1>
@@ -37,80 +37,80 @@ export const Active = () => {
             </h2>
           </div>
           {/* サブタイトル */}
-          <p className="text-primary text-xl md:text-2xl font-semibold tracking-widest">
+          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
             営業時間： 10:00-17:00（最終受付 16:00）
           </p>
           <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="text-[#212121] text-lg font-semibold tracking-widest">
+            <p className="font-semibold text-[#212121] text-lg tracking-widest">
               クレジットカード / 現金 / 交通系IC / PayPay
             </p>
           </div>
         </div>
         {/* コンテンツ */}
-        <div className="flex flex-col xl:flex-row gap-10 lg:gap-10 xl:justify-between">
-          <div className="lg:flex xl:flex-col gap-8 xl:gap-2 xl:max-w-xs">
+        <div className="flex flex-col gap-10 lg:gap-10 xl:flex-row xl:justify-between">
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
             <div className="">
               <Image src={active1} alt="バナナボート" />
             </div>
-            <div className="flex grow flex-col gap-2 min-w-80 lg:justify-end">
-              <h3 className="mt-4 xl:mt-8 text-primary text-xl md:text-2xl font-semibold tracking-widest">
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
                 バナナボート
               </h3>
-              <div className="flex xl:flex-col xl:items-start flex-row items-end gap-2 xl:gap-[2px]">
-                <h4 className="text-[#212121] font-semibold text-lg md:text-xl tracking-widest">
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
                   1,500<span className="text-sm md:text-base">円</span> / 15
                   <span className="text-sm md:text-base">min</span>
                 </h4>
-                <h5 className="text-[#212121] font-semibold text-base md:text-lg tracking-widest">
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
                   参加条件：６<span className="text-xs md:text-sm">歳以上</span>
                 </h5>
               </div>
-              <p className="xl:max-w-80 text-[#212121] text-sm md:text-base tracking-widest leading-loose text-pretty">
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
                 みんなで楽しめるバナナボート！インストラクターがボートを引っ張り、スピード感溢れる体験が楽しめます。
               </p>
             </div>
           </div>
-          <div className="lg:flex xl:flex-col gap-8 xl:gap-2 xl:max-w-xs">
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
             <div className="">
               <Image src={active2} alt="海上ゴーカート" />
             </div>
-            <div className="flex grow flex-col gap-2 min-w-80 lg:justify-end">
-              <h3 className="mt-4 xl:mt-8 text-primary text-xl md:text-2xl font-semibold tracking-widest">
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
                 海上ゴーカート
               </h3>
-              <div className="flex xl:flex-col xl:items-start flex-row items-end gap-2 xl:gap-[2px]">
-                <h4 className="text-[#212121] font-semibold text-lg md:text-xl tracking-widest">
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
                   2,000<span className="text-sm md:text-base">円</span> / 30
                   <span className="text-sm md:text-base">min</span>
                 </h4>
-                <h5 className="text-[#212121] font-semibold text-base md:text-lg tracking-widest">
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
                   参加条件：なし
                 </h5>
               </div>
-              <p className="xl:max-w-80 text-[#212121] text-sm md:text-base tracking-widest leading-loose text-pretty">
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
                 ゆっくり走行で優雅にクルージングできる、お子様でも運転できる安心安全マリンスポーツです。
               </p>
             </div>
           </div>
-          <div className="lg:flex xl:flex-col gap-8 xl:gap-2 xl:max-w-xs">
+          <div className="gap-8 lg:flex xl:max-w-xs xl:flex-col xl:gap-2">
             <div className="">
               <Image src={active3} alt="水上滑り台" />
             </div>
-            <div className="flex grow flex-col gap-2 min-w-80 lg:justify-end">
-              <h3 className="mt-4 xl:mt-8 text-primary text-xl md:text-2xl font-semibold tracking-widest">
+            <div className="flex min-w-80 grow flex-col gap-2 lg:justify-end">
+              <h3 className="mt-4 font-semibold text-primary text-xl tracking-widest md:text-2xl xl:mt-8">
                 水上滑り台
               </h3>
-              <div className="flex xl:flex-col xl:items-start flex-row items-end gap-2 xl:gap-[2px]">
-                <h4 className="text-[#212121] font-semibold text-lg md:text-xl tracking-widest">
+              <div className="flex flex-row items-end gap-2 xl:flex-col xl:items-start xl:gap-[2px]">
+                <h4 className="font-semibold text-[#212121] text-lg tracking-widest md:text-xl">
                   500<span className="text-sm md:text-base">円</span> / 1
                   <span className="text-sm md:text-base">hr</span>
                 </h4>
-                <h5 className="text-[#212121] font-semibold text-base md:text-lg tracking-widest">
+                <h5 className="font-semibold text-[#212121] text-base tracking-widest md:text-lg">
                   参加条件：なし
                 </h5>
               </div>
-              <p className="xl:max-w-80 text-[#212121] text-sm md:text-base tracking-widest leading-loose text-pretty">
+              <p className="text-pretty text-[#212121] text-sm leading-loose tracking-widest md:text-base xl:max-w-80">
                 海の上の大型のアトラクションです。子供から大人まで楽しめるアクティビティが満載です。
               </p>
             </div>

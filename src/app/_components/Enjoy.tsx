@@ -3,25 +3,25 @@ import enjoy01 from "@/assets/enjoy/enjoy01.png";
 
 const Enjoy01 = () => {
   return (
-    <div className="relative flex justify-center items-center bg-white border-[3px] border-[#212121] rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 p-4 sm:p-6 md:p-8">
+    <div className="relative flex h-64 w-64 items-center justify-center rounded-full border-[#212121] border-[3px] bg-white p-4 sm:h-72 sm:w-72 sm:p-6 md:h-80 md:w-80 md:p-8 lg:h-96 lg:w-96">
       <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-        <h1 className="text-primary font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-widest text-center leading-relaxed">
+        <h1 className="text-center font-bold text-primary text-xl leading-relaxed tracking-widest sm:text-2xl md:text-3xl lg:text-4xl">
           充実した
           <br />
           マリンスポーツ
         </h1>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#212121] leading-relaxed tracking-widest">
+        <p className="text-center text-[#212121] text-xs leading-relaxed tracking-widest sm:text-sm md:text-base lg:text-lg">
           豊富なマリンスポーツで遊べる！
           <br />
           お友達は勿論、お子様連れでも楽しめます。
         </p>
       </div>
-      <div className="absolute top-0 left-4 sm:top-0 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
-        <span className="font-bold text-primary text-5xl sm:text-6xl md:text-7xl tracking-wide">
+      <div className="absolute top-0 left-4 flex h-12 w-12 items-center justify-center rounded-full sm:top-0 sm:left-6 sm:h-16 sm:w-16">
+        <span className="font-bold text-5xl text-primary tracking-wide sm:text-6xl md:text-7xl">
           01
         </span>
       </div>
-      <div className="hidden lg:block absolute -top-64 -right-72">
+      <div className="-top-64 -right-72 absolute hidden lg:block">
         <Image src={enjoy01} alt="enjoy01" />
       </div>
     </div>
@@ -29,21 +29,21 @@ const Enjoy01 = () => {
 };
 const Enjoy02 = () => {
   return (
-    <div className="relative flex justify-center items-center bg-white border-[3px] border-[#212121] rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 p-4 sm:p-6 md:p-8">
+    <div className="relative flex h-64 w-64 items-center justify-center rounded-full border-[#212121] border-[3px] bg-white p-4 sm:h-72 sm:w-72 sm:p-6 md:h-80 md:w-80 md:p-8 lg:h-96 lg:w-96">
       <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-        <h1 className="text-primary font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-widest text-center leading-relaxed">
+        <h1 className="text-center font-bold text-primary text-xl leading-relaxed tracking-widest sm:text-2xl md:text-3xl lg:text-4xl">
           海で楽しめる
           <br />
           ライブ
         </h1>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#212121] leading-relaxed tracking-widest">
+        <p className="text-center text-[#212121] text-xs leading-relaxed tracking-widest sm:text-sm md:text-base lg:text-lg">
           浜辺で食事をしながら、
           <br />
           有名アーティストの曲を楽しむことができます。
         </p>
       </div>
-      <div className="absolute bottom-0 left-4 sm:bottom-0 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
-        <span className="font-bold text-primary text-5xl sm:text-6xl md:text-7xl tracking-wide">
+      <div className="absolute bottom-0 left-4 flex h-12 w-12 items-center justify-center rounded-full sm:bottom-0 sm:left-6 sm:h-16 sm:w-16">
+        <span className="font-bold text-5xl text-primary tracking-wide sm:text-6xl md:text-7xl">
           02
         </span>
       </div>
@@ -52,20 +52,20 @@ const Enjoy02 = () => {
 };
 const Enjoy03 = () => {
   return (
-    <div className="relative flex justify-center items-center bg-white border-[3px] border-[#212121] rounded-full w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 p-4 sm:p-6 md:p-8">
+    <div className="relative flex h-64 w-64 items-center justify-center rounded-full border-[#212121] border-[3px] bg-white p-4 sm:h-72 sm:w-72 sm:p-6 md:h-80 md:w-80 md:p-8 lg:h-96 lg:w-96">
       <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
-        <h1 className="text-primary font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-widest text-center leading-relaxed">
+        <h1 className="text-center font-bold text-primary text-xl leading-relaxed tracking-widest sm:text-2xl md:text-3xl lg:text-4xl">
           フィナーレの
           <br />
           海上花火
         </h1>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center text-[#212121] leading-relaxed tracking-widest">
+        <p className="text-center text-[#212121] text-xs leading-relaxed tracking-widest sm:text-sm md:text-base lg:text-lg">
           水面に反射する綺麗な花火をで、
           <br /> 今日１日を締めくくりましょう。
         </p>
       </div>
-      <div className="absolute -bottom-2 right-4 sm:bottom-0 sm:right-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
-        <span className="font-bold text-primary text-5xl sm:text-6xl md:text-7xl tracking-wide">
+      <div className="-bottom-2 absolute right-4 flex h-12 w-12 items-center justify-center rounded-full sm:right-6 sm:bottom-0 sm:h-16 sm:w-16">
+        <span className="font-bold text-5xl text-primary tracking-wide sm:text-6xl md:text-7xl">
           03
         </span>
       </div>
@@ -147,10 +147,10 @@ export const Enjoy = () => {
         </div>
       </div>
       <div className="absolute top-72 right-1/3 xl:top-24 xl:right-80">
-        <div className="flex justify-center relative">
+        <div className="relative flex justify-center">
           <Enjoy01 />
         </div>
-        <div className="flex justify-center gap-2 absolute top-48 md:top-64 lg:top-72 xl:top-72 -left-1/2">
+        <div className="-left-1/2 absolute top-48 flex justify-center gap-2 md:top-64 lg:top-72 xl:top-72">
           <Enjoy02 />
           <Enjoy03 />
         </div>

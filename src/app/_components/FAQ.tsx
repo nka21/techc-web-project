@@ -5,8 +5,8 @@ import { LuPlus, LuMinus } from "react-icons/lu";
 
 const QuestionIcon = () => {
   return (
-    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full border-2 border-primary flex justify-center items-center flex-shrink-0">
-      <p className="text-xl sm:text-2xl md:text-3xl font-medium text-primary">
+    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-primary sm:h-12 sm:w-12 md:h-16 md:w-16">
+      <p className="font-medium text-primary text-xl sm:text-2xl md:text-3xl">
         Q
       </p>
     </div>
@@ -15,8 +15,8 @@ const QuestionIcon = () => {
 
 const AnswerIcon = () => {
   return (
-    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full bg-primary flex justify-center items-center flex-shrink-0">
-      <p className="text-xl sm:text-2xl md:text-3xl font-medium text-white">
+    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary sm:h-12 sm:w-12 md:h-16 md:w-16">
+      <p className="font-medium text-white text-xl sm:text-2xl md:text-3xl">
         A
       </p>
     </div>
@@ -35,15 +35,15 @@ const FAQItem = ({
   return (
     <div className="mb-6 md:mb-8">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3 sm:gap-4 md:gap-6 lg:gap-10 py-2 flex-grow">
+        <div className="flex flex-grow items-center gap-3 py-2 sm:gap-4 md:gap-6 lg:gap-10">
           <QuestionIcon />
-          <p className="text-sm sm:text-base lg:text-xl text-[#212121] text-pretty pr-4">
+          <p className="text-pretty pr-4 text-[#212121] text-sm sm:text-base lg:text-xl">
             {question}
           </p>
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] bg-[#0077c9] rounded-full flex items-center justify-center"
+          className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#0077c9] sm:h-10 sm:w-10 md:h-[50px] md:w-[50px]"
         >
           {isOpen ? (
             <LuMinus color="white" size={20} />
@@ -53,10 +53,10 @@ const FAQItem = ({
         </button>
       </div>
       {isOpen && answer && (
-        <div className="mt-4 p-3 sm:p-4 md:p-6 border-2 rounded-xl border-primary">
+        <div className="mt-4 rounded-xl border-2 border-primary p-3 sm:p-4 md:p-6">
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6 lg:gap-10">
             <AnswerIcon />
-            <p className="text-sm sm:text-base lg:text-xl text-[#212121] text-pretty">
+            <p className="text-pretty text-[#212121] text-sm sm:text-base lg:text-xl">
               {answer}
             </p>
           </div>
@@ -97,13 +97,13 @@ export const Faq = () => {
 
   return (
     <section className="min-h-full w-full">
-      <div className="container mx-auto my-16 sm:my-24 md:my-32 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="container mx-auto my-16 px-4 sm:my-24 sm:px-8 md:my-32 md:px-12 lg:px-20">
         {/* セクションタイトル */}
-        <div className="flex flex-col sm:flex-row sm:items-end gap-2 sm:gap-4 mb-8 sm:mb-12">
-          <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary tracking-widest">
+        <div className="mb-8 flex flex-col gap-2 sm:mb-12 sm:flex-row sm:items-end sm:gap-4">
+          <h1 className="font-bold text-2xl text-primary tracking-widest sm:text-3xl md:text-4xl lg:text-5xl">
             FAQ
           </h1>
-          <h2 className="font-semibold text-lg sm:text-xl md:text-2xl text-primary tracking-widest">
+          <h2 className="font-semibold text-lg text-primary tracking-widest sm:text-xl md:text-2xl">
             よくあるご質問
           </h2>
         </div>

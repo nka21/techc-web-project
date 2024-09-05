@@ -157,8 +157,8 @@ const RentalItemIcons: Record<RentalItemId, JSX.Element> = {
 };
 
 const RentalItem: React.FC<RentalItemProps> = ({ id, name }) => (
-  <div className="flex flex-col gap-4 items-center">
-    <div className="relative w-36 h-36">
+  <div className="flex flex-col items-center gap-4">
+    <div className="relative h-36 w-36">
       <svg viewBox="0 0 186 186" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="93" cy="93" r="90" fill="white" />
         <circle
@@ -170,11 +170,11 @@ const RentalItem: React.FC<RentalItemProps> = ({ id, name }) => (
           stroke-width="3"
         />
       </svg>
-      <div className="absolute flex items-center justify-center inset-0 p-8">
+      <div className="absolute inset-0 flex items-center justify-center p-8">
         <div className="h-20 w-20">{RentalItemIcons[id]}</div>
       </div>
     </div>
-    <div className="text-[#212121] text-lg font-semibold tracking-widest">
+    <div className="font-semibold text-[#212121] text-lg tracking-widest">
       {name}
     </div>
   </div>
@@ -185,7 +185,7 @@ export const Rental = () => {
     <section className="min-h-full w-full">
       <div className="container mx-auto my-32 px-8 md:px-12 lg:px-20">
         {/* セクションタイトル */}
-        <div className="flex flex-col gap-4 mb-12">
+        <div className="mb-12 flex flex-col gap-4">
           <div className="items-end gap-4 sm:flex">
             <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
               RENTAL
@@ -194,12 +194,12 @@ export const Rental = () => {
               レンタルサービス
             </h2>
           </div>
-          <p className="text-primary text-xl font-semibold tracking-widest md:text-2xl">
+          <p className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
             営業時間: 10:00-17:00（最終受付 16:00）
           </p>
         </div>
         {/* コンテンツ */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-6 xl:gap-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 xl:grid-cols-6 xl:gap-8">
           <RentalItem id={1} name="ビーチチェア" />
           <RentalItem id={2} name="パラソル" />
           <RentalItem id={3} name="浮き輪" />

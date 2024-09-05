@@ -15,19 +15,21 @@ export const Footer = () => {
             </p>
           </div>
           {/* イベント情報 */}
-          <div className="flex flex-col gap-1 text-[#212121]">
-            <p className="font-medium text-base tracking-widest lg:text-lg">
-              イベント開催日時：
-              <span className="text-sm lg:text-base">
-                2024年8月15日 10:00～21:00
-              </span>
-            </p>
-            <p className="font-medium text-base tracking-widest lg:text-lg">
-              イベント開催場所：
-              <span className="text-sm lg:text-base">
+          <div className="space-y-2 text-[#212121]">
+            <div className="flex flex-col md:flex-row md:items-center">
+              <p className="font-medium text-base tracking-widest lg:text-lg md:w-48">
+                イベント開催日時：
+              </p>
+              <p className="text-sm lg:text-base">2024年8月15日 10:00～21:00</p>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center">
+              <p className="font-medium text-base tracking-widest lg:text-lg md:w-48">
+                イベント開催場所：
+              </p>
+              <p className="text-sm lg:text-base">
                 お台場海浜公園（東京都港区台場）
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
           {/* SNS */}
           <div className="flex flex-row gap-4 text-[#212121]">

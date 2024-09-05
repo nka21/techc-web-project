@@ -1,5 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import React from "react";
+import Image, { type StaticImageData } from "next/image";
+import type React from "react";
 
 // 画像のインポート
 import banana from "@/assets/drink_food/banana.jpg";
@@ -24,9 +24,9 @@ const FoodCard: React.FC<FoodCardProps> = ({
   className,
 }) => (
   <div
-    className={`w-[380px] h-[400px] flex-shrink-0 bg-white rounded-[20px] overflow-hidden shadow-lg ${className}`}
+    className={`w-80 h-80 flex-shrink-0 bg-white rounded-[20px] overflow-hidden shadow-lg ${className}`}
   >
-    <div className="w-full h-[200px] relative">
+    <div className="w-full h-36 relative">
       <Image
         src={image}
         alt={`${title} artist image`}
@@ -35,11 +35,11 @@ const FoodCard: React.FC<FoodCardProps> = ({
       />
     </div>
     <div className="p-6">
-      <div className="flex items-baseline space-x-4 mb-4 font-semibold text-xl">
-        <h3 className="tracking-widest">{title}</h3>
+      <div className="flex items-baseline space-x-4 mb-4 font-semibold">
+        <h3 className="text-md tracking-widest">{title}</h3>
         <span className="tracking-[2px]">{price}</span>
       </div>
-      <p className="text-base tracking-widest">{description}</p>
+      <p className="text-sm tracking-widest leading-relaxed">{description}</p>
     </div>
   </div>
 );
@@ -63,7 +63,7 @@ const PaymentIcon: React.FC = () => (
 
 const DrinkFood = () => {
   return (
-    <div className="w-full min-h-screen relative overflow-hidden">
+    <section className="w-full min-h-full h-full relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={drink_food_bg}
@@ -74,22 +74,24 @@ const DrinkFood = () => {
         />
         <div className="absolute inset-0 bg-[#0077c9]/10" />
       </div>
-      <div className="relative z-10 px-[70px] pt-[174px]">
-        <div className="mb-12">
-          <div className="flex items-baseline space-x-4 mb-6 text-primary">
-            <h1 className="text-6xl font-semibold tracking-[6px]">
+      <div className="container mx-auto relative z-10 px-8 md:px-12 lg:px-20 my-32">
+        <div className="flex flex-col mb-12 gap-4">
+          {/* メインタイトル */}
+          <div className="items-end gap-4 sm:flex">
+            <h1 className="font-bold text-3xl text-primary tracking-widest md:text-5xl">
               DRINK&FOOD
             </h1>
-            <span className="text-3xl font-semibold tracking-[3px]">
+            <h2 className="font-semibold text-primary text-xl tracking-widest md:text-2xl">
               浜辺の屋台
-            </span>
+            </h2>
           </div>
-          <p className="text-primary text-3xl font-semibold tracking-[3px] mb-6">
-            営業時間: 10:00-19:00
+          {/* サブタイトル */}
+          <p className="text-primary text-xl md:text-2xl font-semibold tracking-widest">
+            営業時間： 10:00-19:00
           </p>
-          <div className="flex items-center space-x-[10px]">
+          <div className="flex items-center gap-4">
             <PaymentIcon />
-            <p className="text-[#212121] text-xl font-semibold tracking-widest">
+            <p className="text-[#212121] text-lg font-semibold tracking-widest">
               現金 / 交通系IC / PayPay
             </p>
           </div>
@@ -132,7 +134,7 @@ const DrinkFood = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
